@@ -1,0 +1,20 @@
+<app-vegetable-home></app-vegetable-home>
+<div 
+class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h3 class="offcanvas-title" id="offcanvasExampleLabel">MENU</h3>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offbox">
+        <div class="slide">
+            <ul class="list-group" >
+              <li class="list-group-item list-group-item-action list-group-item-primary" aria-current="page" routerLink="/"><a href="#"><i class="fa fa-home"></i>HOME</a></li>
+              <li class="list-group-item list-group-item-action list-group-item-info" ><a href="#"><i class="fa fa-info"></i>ABOUT US</a></li>
+              <li class="list-group-item list-group-item-action list-group-item-danger"><a href="#"><i class="fa fa-address-book"></i>CONTACT US</a></li>
+            </ul>
+        </div>
+      
+    </div>
+</div>
+  
+<router-outlet></router-outlet>

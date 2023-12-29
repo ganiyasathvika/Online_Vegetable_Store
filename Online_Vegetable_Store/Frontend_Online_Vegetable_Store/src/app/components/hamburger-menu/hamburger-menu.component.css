@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@300&display=swap');
+
+.offbox{
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    justify-items: left;
+}
+
+.offcanvas{
+    z-index: 10000;
+}
+
+.slide ul{
+    list-style-type:none;
+    align-items: start;
+    justify-content: center;
+}
+
+.slide ul li{
+    padding:5px;
+}
+
+.list-group-item{
+    width:400px;
+    height:50px;
+    text-align: left;
+    line-height: 50px;
+    border-radius: 0px;
+    
+}
+
+.slide ul li a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Kalnia', serif;
+    font-weight: bold;
+    align-items: center;
+}
+
+.slide ul li a i{
+    align-items: center;
+    justify-items: left;
+    padding: 10px;
+    color: rgb(41, 201, 41);
+}
+
+h3{
+    color: rgb(40, 180, 22);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+}

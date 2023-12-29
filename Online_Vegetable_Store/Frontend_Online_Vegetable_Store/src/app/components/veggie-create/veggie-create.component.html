@@ -1,0 +1,153 @@
+<app-admin></app-admin>
+
+<div class="container justify-content-center col-6">
+    <h2>ADD NEW VEGETABLE</h2>
+    <hr />
+    <form [formGroup]="vegetableForm" (ngSubmit)="createVegetable()">
+        <div class="mb-3">
+            <label class="form-label"> Vegetable Name</label>
+            <input type="text" class="form-control" formControlName="vegetableName" />
+            <div
+            *ngIf="
+                vegetableForm.controls['vegetableName'].dirty ||
+                vegetableForm.controls['vegetableName'].touched
+            "
+            >
+            <div
+                class="alert alert-danger"
+                *ngIf="vegetableForm.controls['vegetableName'].errors?.['required']"
+            >
+                Vegetable name is required
+            </div>
+    
+            <div
+                class="alert alert-danger"
+                *ngIf="vegetableForm.controls['vegetableName'].errors?.['pattern']"
+            >
+                Vegetable name is invalid
+            </div>
+            </div>
+        </div>
+  
+        
+        <div class="mb-3">
+            <label class="form-label">Vegetable Price</label>
+            <input type="text" class="form-control" formControlName="vegetablePrice" />
+            <div
+              *ngIf="
+                vegetableForm.controls['vegetablePrice'].dirty ||
+                vegetableForm.controls['vegetablePrice'].touched
+              "
+            >
+              <div
+                class="alert alert-danger"
+                *ngIf="vegetableForm.controls['vegetablePrice'].errors?.['required']"
+              >
+                Vegetable Price is required
+              </div>
+      
+              <!-- <div
+                class="alert alert-danger"
+                *ngIf="employeeForm.controls['employeeName'].errors?.['pattern']"
+              >
+                Employee Email is invalid
+              </div> -->
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Vegetable Weight</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="vegetableWeight"
+            />
+            <div
+              *ngIf="
+                vegetableForm.controls['vegetableWeight'].dirty ||
+                vegetableForm.controls['vegetableWeight'].touched
+              "
+            >
+              <div
+                class="alert alert-danger"
+                *ngIf="vegetableForm.controls['vegetableWeight'].errors?.['required']"
+              >
+                vegetableWeight is required
+              </div>
+      
+              <!-- <div
+                class="alert alert-danger"
+                *ngIf="vegetableForm.controls['vegetableBenefits'].errors?.['pattern']"
+              >
+                Employee Salary is invalid
+              </div> -->
+            </div>
+              
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Vegetable Benefits</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="vegetableBenefits"
+            />
+            <div
+              *ngIf="
+                vegetableForm.controls['vegetableBenefits'].dirty ||
+                vegetableForm.controls['vegetableBenefits'].touched
+              "
+            >
+              <div
+                class="alert alert-danger"
+                *ngIf="vegetableForm.controls['vegetableBenefits'].errors?.['required']"
+              >
+                vegetableBenefits is required
+              </div>
+      
+              <!-- <div
+                class="alert alert-danger"
+                *ngIf="vegetableForm.controls['vegetableBenefits'].errors?.['pattern']"
+              >
+                Employee Salary is invalid
+              </div> -->
+            </div>
+              
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Vegetable Image Url</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="vegetableImageUrl"
+            />
+            <div
+              *ngIf="
+                vegetableForm.controls['vegetableImageUrl'].dirty ||
+                vegetableForm.controls['vegetableImageUrl'].touched
+              "
+            >
+              <div
+                class="alert alert-danger"
+                *ngIf="vegetableForm.controls['vegetableImageUrl'].errors?.['required']"
+              >
+                vegetableBenefits is required
+              </div>
+      
+              <!-- <div
+                class="alert alert-danger"
+                *ngIf="vegetableForm.controls['vegetableBenefits'].errors?.['pattern']"
+              >
+                Employee Salary is invalid
+              </div> -->
+            </div>
+            
+        </div>
+
+
+        <input type="submit" value="Add Vegetable" [disabled]="vegetableForm.invalid" class="btn btn-primary mt-4"/>
+
+        
+    </form>
+</div>

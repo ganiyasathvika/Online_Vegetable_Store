@@ -1,0 +1,23 @@
+.admin{
+    padding-top: 100px;
+}
+
+nav{
+    background-color: rgb(28, 181, 28);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+nav a{
+    color: whitesmoke;
+
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+nav ul li {
+    justify-items: center;
+    align-items: center;
+}

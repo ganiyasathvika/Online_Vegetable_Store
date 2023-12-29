@@ -1,0 +1,143 @@
+<div id="signUp" class="container justify-content-center col-md-5 mt-4">
+  <h2>Sign Up/Register</h2>
+  <hr />
+  <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+    <div class="mb-3">
+      <label for="exampleInputName" type="text" class="form-label"
+        >Full Name</label
+      >
+      <input
+        type="name"
+        class="form-control"
+        id="exampleInputName"
+        formControlName="customerName"
+      />
+      <div
+        *ngIf="
+          signUpForm.controls['customerName'].dirty ||
+          signUpForm.controls['customerName'].touched
+        "
+      >
+        <div
+          class="alert alert-danger"
+          *ngIf="signUpForm.controls['customerName'].errors?.['required']"
+        >
+          Customer Name is required
+        </div>
+
+        <div
+          class="alert alert-danger"
+          *ngIf="signUpForm.controls['customerName'].errors?.['pattern']"
+        >
+          Customer name is invalid
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" type="email" class="form-label"
+        >Email address</label
+      >
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        formControlName="customerEmail"
+      />
+      <div
+        *ngIf="
+          signUpForm.controls['customerEmail'].dirty ||
+          signUpForm.controls['customerEmail'].touched
+        "
+      >
+        <div
+          class="alert alert-danger"
+          *ngIf="signUpForm.controls['customerEmail'].errors?.['required']"
+        >
+          Customer Email is required
+        </div>
+
+      </div>
+      <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputMobile" type="text" class="form-label"
+        >Mobile</label
+      >
+      <input type="email" class="form-control" id="exampleInputMobile" formControlName="customerMobile" />
+      <div
+          *ngIf="
+            signUpForm.controls['customerMobile'].dirty ||
+            signUpForm.controls['customerMobile'].touched
+          "
+        >
+          <div
+            class="alert alert-danger"
+            *ngIf="signUpForm.controls['customerMobile'].errors?.['required']"
+          >
+            Customer Mobile is required
+          </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" type="password" class="form-label"
+        >New Password</label
+      >
+      <input type="password" class="form-control" id="exampleInputPassword1" />
+      <div
+          *ngIf="
+            signUpForm.controls['customerNewPassword'].dirty ||
+            signUpForm.controls['customerNewPassword'].touched
+          "
+        >
+          <div
+            class="alert alert-danger"
+            *ngIf="signUpForm.controls['customerNewPassword'].errors?.['required']"
+          >
+            Customer Password is required
+          </div>
+      </div>
+    </div>
+
+
+    <div class="mb-3">
+      <label
+        for="exampleInputConfirmPassword1"
+        type="password"
+        class="form-label"
+        >Confirm Password</label
+      >
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputConfirmPassword1"
+      />
+
+      <div
+          *ngIf="
+            signUpForm.controls['customerConfirmPassword'].dirty ||
+            signUpForm.controls['customerConfirmPassword'].touched
+          "
+        >
+          <div
+            class="alert alert-danger"
+            *ngIf="signUpForm.controls['customerConfirmPassword'].errors?.['required']"
+          >
+            Customer Password is required
+          </div>
+      </div>
+    </div>
+
+    <input
+    type="submit"
+    value="signUp"
+    [disabled]="signUpForm.invalid"
+    class="btn btn-primary mt-4"
+  />
+
+  </form>
+</div>

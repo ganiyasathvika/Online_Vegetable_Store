@@ -1,0 +1,41 @@
+<app-admin></app-admin>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>VEGETABLE ID</th>
+            <th> VEGETABLE NAME</th>
+            <th>VEGETABLE PRICE</th>
+            <th>VEGETABLE WEIGHT</th>
+            <th>VEGETABLE BENEFITS</th>
+            <th>VEGETABLE IMAGE URL</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr *ngFor="let veggie of veggies">
+            <td>{{veggie.vegetableId}}</td>
+            <td>{{veggie.vegetableName}}</td>
+            <td>{{veggie.vegetablePrice}}</td>
+            <td>{{veggie.vegetableWeight}}</td>
+            <td>{{veggie.vegetableBenefits}}</td>
+            <td>{{veggie.vegetableImageUrl}}</td>
+
+             <td>
+                <button class="btn btn-danger"
+                (click)="deleteVeggie(veggie.vegetableId)">DELETE</button>
+            </td> 
+             <td>
+                <button class="btn btn-success"
+                (click)="showEdit(veggie.vegetableId)">EDIT</button>
+            </td>
+        </tr>
+         <!-- <tr *ngIf="veggies.length === 0">
+            <td>No Data Found</td>
+        </tr>  -->
+        </tbody>
+        
+
+    </table>
+</div>

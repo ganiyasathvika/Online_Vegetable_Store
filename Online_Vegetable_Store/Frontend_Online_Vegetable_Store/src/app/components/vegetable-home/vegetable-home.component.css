@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100;400&family=Roboto&family=Roboto+Condensed:wght@400;500&display=swap');
+/* .container-fluid{
+  z-index: 10000;
+} */
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+  
+/* #empty{
+  padding-bottom: 90px;
+} */
+
+.hero img {
+    margin-top: 110px;
+    width: 100%; 
+    height: auto;
+}
+  
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust as needed: space-between, flex-start, flex-end, etc. */
+  margin: auto;
+}
+
+
+.card {
+  border: 1px solid #ccc;
+  width:18rem;
+  height: 120;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.card-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius:4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px; 
+  height: 150px;
+}
+
+.card #des{
+  font-family: 'Roboto', sans-serif;
+  font-size: small;
+  
+}
+
+.card #des h5{
+  font-weight: bold;
+  
+}
+
+
+.card-body img:hover{
+  opacity:0.7;
+}
+
+.card-body #cart{
+  border-color: #34dba6;
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  box-shadow: 0 0 40px 40px #34dba6 inset, 0 0 0 0 #34dba6;
+  transition: all 100ms ease-in-out;
+
+  
+  &:hover {
+    box-shadow: 0 0 10px 0 #34dba6 inset, 0 0 5px 2px #34dba6;
+    color:  #34dba6;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+  }
+}
+  

@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="hero">
+    <img src="/assets/hero_image.png" alt="Hero Image" />
+  </div>
+
+  <hr />
+
+  <div class="row">
+    <div class="col-md-3 col-sm-6" *ngFor="let veggie of veggies">
+      <div class="card">
+        <div class="card-body">
+          <img
+            src="{{ veggie.vegetableImageUrl }}"
+            alt="{{ veggie.vegetableName }}"
+          />
+          <div id="des" class="mt-4">
+            <h5>{{ veggie.vegetableName }}</h5>
+            <p>Benefits: {{ veggie.vegetableBenefits }}</p>
+            <p>Price: {{ veggie.vegetablePrice }}</p>
+            <p>Weight: {{ veggie.vegetableWeight }}</p>
+          </div>
+          <button id="cart" type="submit" class="btn">Add to Cart</button>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
